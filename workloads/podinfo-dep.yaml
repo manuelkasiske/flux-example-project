@@ -34,7 +34,7 @@ spec:
         - "1"
       containers:
       - name: podinfod
-        image: mk7831/web-demo:1.0
+        image: mk7831/web-demo:1.1
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
