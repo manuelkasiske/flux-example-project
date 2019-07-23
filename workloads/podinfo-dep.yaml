@@ -34,15 +34,15 @@ spec:
         - "1"
       containers:
       - name: podinfod
-        image: stefanprodan/podinfo:1.4.1
+        image: mk7831/web-demo:1.0
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 9898
+        - containerPort: 80
           name: http
           protocol: TCP
         command:
         - ./podinfo
-        - --port=9898
+        - --port=80
         - --level=info
         - --random-delay=false
         - --random-error=false
@@ -52,11 +52,11 @@ spec:
         livenessProbe:
           httpGet:
             path: /healthz
-            port: 9898
+            port: 80
         readinessProbe:
           httpGet:
             path: /readyz
-            port: 9898
+            port: 80
         resources:
           limits:
             cpu: 1000m
