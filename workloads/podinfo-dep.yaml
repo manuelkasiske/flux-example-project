@@ -41,7 +41,7 @@ spec:
           name: http
           protocol: TCP
         command:
-        - ./podinfo
+        - ./main
         - --port=80
         - --level=info
         - --random-delay=false
